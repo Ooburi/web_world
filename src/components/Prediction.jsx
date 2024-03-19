@@ -84,7 +84,7 @@ const Prediction = () => {
   return (
     <div className='flex flex-col w-[600px]'>
         <div className={`flex h-[50px] w-full ${topic.color} text-black  justify-around flex-col`}>
-            {topic.theme}
+            {/* {topic.theme} */}
         </div>
         <div className={`flex  w-full p-[15px] bg-slate-200 text-black justify-left text-start flex-col outline-neutral-900`}>
             {prediction}
