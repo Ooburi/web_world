@@ -26,13 +26,15 @@ function App() {
   return (
     
     <>
-     {/* <div className='flex flex-col w-[500px] absolute left-0 top-0'>
+     <div className='flex flex-col w-[500px] absolute left-0 top-0'>
       <h1 className='bg-red-900 ring-offset-indigo-950 text-black'>{one}</h1>
-      </div> */}
-
+      </div>
+АЛЛО
       <Prediction />
       <ScrollBlock />
       <Ball8 />
+      зачем здесь это
+      <h4> Thousand Sunny</h4>
     </>
   )
 }

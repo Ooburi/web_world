@@ -7,7 +7,7 @@ const ScrollBlock = () => {
     const [text, setText] = useState([8,7,6,5,4,3,2,1,0])
 
     useEffect(() => {
-        const element = document.querySelector('.infinite-animation');
+        const element = document.querySelector('.animated');
         const handleAnimationIteration = () => {
           rewrite()
           console.log('Animation iteration!');
@@ -15,7 +15,6 @@ const ScrollBlock = () => {
     
         element.addEventListener('animationiteration', handleAnimationIteration);
     
-        // Cleanup function to remove the event listener on unmount
         return () => {
           element.removeEventListener('animationiteration', handleAnimationIteration);
         };
@@ -27,8 +26,8 @@ const ScrollBlock = () => {
     }
 
   return (
-    <div className='absolute flex flex-col left-[10px] top-[10px] h-[450px] w-[300px] bg-white p-0 m-0 overflow-clip'>
-        <div className='border-b-[1px] border-solid border-black w-full h-[50px] animate-trans text-black p-[10px] infinite-animation' >
+    <div className='absolute flex flex-col left-[10px] top-[134px] h-[450px] w-[300px] bg-white p-0 m-0 overflow-clip'>
+        <div className='border-b-[1px] border-solid border-black w-full h-[50px] animate-trans text-black p-[10px] animated' >
             {text[0]}
         </div>
         <div className='border-b-[1px] border-solid border-black w-full h-[50px] animate-trans text-black p-[10px] '>
