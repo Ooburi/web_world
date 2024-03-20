@@ -21,10 +21,10 @@ const Ball8 = () => {
     
   return (
     <>
-    <div className='absolute left-[95px] bottom-[26px] w-[300px] h-[100px] rounded-[100%] bg-gray-800'>
+    <div className='absolute left-[55px] bottom-[26px] w-[300px] h-[100px] rounded-[100%] bg-gray-800'>
 
     </div>
-     <div className={`absolute left-[150px] bottom-[30px] w-[300px] h-[300px] rounded-[100%] bg-black overflow-clip cursor-pointer
+     <div className={`absolute left-[110px] bottom-[30px] w-[300px] h-[300px] rounded-[100%] bg-black overflow-clip cursor-pointer
      ${shaking&&answer===''?'animate-shake':''}`}
        onClick={()=>clicked()} onMouseDown={()=>shakingOn()} onMouseUp={()=>shakingOff()} onMouseLeave={()=>shakingOff()}>
         <div className='absolute left-[105px] top-[35px] w-[144px] h-[156px] rounded-[100%] -rotate-12  bg-slate-800 border-slate-500 border-b-[1px] border-r-[1px] border-solid shadow-sm'>
@@ -36,9 +36,10 @@ const Ball8 = () => {
         <div className='absolute text-[130px] -rotate-[30deg] -skew-y-12 left-[-10px] top-[70px] text-slate-300 select-none'>
             8
         </div>
-        
     </div>
-    
+    {/* <h2 className='absolute left-[384px] bottom-[306px] text-[40px] select-none'>
+    {shaking&&answer===''?'oH YeAh!':'⬋CLICK ME'}
+    </h2> */}
     </>
    
   )

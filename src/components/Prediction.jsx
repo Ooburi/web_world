@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 function getRandomInt(max) {
@@ -72,8 +72,7 @@ const getRandomPrediction = (topic) => {
 }
 
 const getRandomAdvice = () => {
-    const things = ["близкого общения", "прогулок на свежем воздухе", "сидения за компьютером", "чая и кофе", "взглядов в глаза", "друзей", "денежных трат", "покупок", "новых фильмов", "новых знакомств", "компьютерных игр", "кредитов", "путешествий", "езды на автомобиле", "цветов", "число 42"]
-
+    const things = ["friends", "tea", "coffee", "womans","men","video games","candies","water","sugar","children","money","black shirts","flowers","alcohol","sex","pets","predictions","books","presents","work","hobbies"]
     return things[getRandomInt(things.length)]
 }
 
@@ -81,21 +80,30 @@ const Prediction = () => {
     const topic = getRandomTopic()
     const prediction = getRandomPrediction(topic.id)
 
+    const [hover,setHover] = useState(false);
+
+
   return (
-    <div className='flex flex-col w-[600px]'>
-        <div className={`flex h-[50px] w-full ${topic.color} text-black  justify-around flex-col`}>
-            {/* {topic.theme} */}
+    <>
+    <div className='flex flex-col w-[500px] h-[50px] absolute left-0 top-0 cursor-pointer select-none'
+        onClick={()=>setHover(!hover)}
+    >
+      <h2 className='bg-red-900 ring-offset-indigo-950 text-white'> CLICK TO GET RANDOM PREDICTION</h2>
+    </div>
+
+    <div className={`absolute left-[15px] top-[20px] flex flex-col w-[600px] ${hover?'':'hidden'}`}>
+        <div className={`flex h-[25px] w-full ${topic.color} text-black  justify-around flex-col`}>
         </div>
-        <div className={`flex  w-full p-[15px] bg-slate-200 text-black justify-left text-start flex-col outline-neutral-900`}>
+        <div className={`flex  w-full p-[15px] bg-slate-200 text-black justify-left text-start flex-col outline-neutral-900 select-none`}>
             {prediction}
         </div>
-        <div className='bg-neutral-300 text-black font-bold text-[12px] text-left pl-[20px]'>
-            Советы: <br/>
-            Избегайте {getRandomAdvice()}<br/>
-            Ищите больше {getRandomAdvice()}<br/>
+        <div className='bg-neutral-300 text-black font-bold text-[12px] text-left pl-[20px] select-none'>
+            Avoid {getRandomAdvice()}<br/>
+            Get more {getRandomAdvice()}<br/>
         </div>
     </div>
-  )
+    </>
+    )
 }
 
 export default Prediction

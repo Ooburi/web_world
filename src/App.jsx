@@ -4,6 +4,8 @@ import Prediction from './components/Prediction'
 import ScrollBlock from './components/ScrollBlock'
 import Ball8 from './components/Ball8'
 
+import Background from './components/Background'
+
 function App() {
   const [count, setCount] = useState(0)
   const [words,setWords] = useState('')
@@ -26,15 +28,10 @@ function App() {
   return (
     
     <>
-     <div className='flex flex-col w-[500px] absolute left-0 top-0'>
-      <h1 className='bg-red-900 ring-offset-indigo-950 text-black'>{one}</h1>
-      </div>
-АЛЛО
+      <Background />     
       <Prediction />
       <ScrollBlock />
       <Ball8 />
-      зачем здесь это
-      <h4> Thousand Sunny</h4>
     </>
   )
 }
