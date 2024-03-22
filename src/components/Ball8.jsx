@@ -21,7 +21,7 @@ const Ball8 = () => {
     
   return (
     <>
-    <div className='absolute left-[55px] bottom-[26px] w-[300px] h-[100px] rounded-[100%] bg-gray-800'>
+    <div className='absolute left-[55px] bottom-[26px] w-[300px] h-[100px] rounded-[100%] bg-black blur-lg opacity-[0.35]'>
 
     </div>
      <div className={`absolute left-[110px] bottom-[30px] w-[300px] h-[300px] rounded-[100%] bg-black overflow-clip cursor-pointer

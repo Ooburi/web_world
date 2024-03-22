@@ -25,8 +25,9 @@ const Background = () => {
                         style={{
                             width: `${rand(50)+20}px`,
                             height:`${rand(50)+20}px`,
-                            borderRadius: `${rand(100)}%`,
-                            backgroundColor: `rgb(${rand(150)}, ${rand(150)}, ${rand(150)})`,
+                            borderRadius: `${rand(20)}%`,
+                            border: `${rand(2)}px solid rgb(${rand(100)+123}, ${rand(20)+113}, ${rand(20)+223})`,
+                            backgroundColor: `rgb(${rand(80)+80}, ${rand(10)+8}, ${rand(11)+210})`,
                             left: `${rand(window.screen.width/1.3)}px`,
                             top: `${rand(window.screen.height/1.3)}px`
                         }}>
